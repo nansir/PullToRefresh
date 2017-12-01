@@ -1,0 +1,9 @@
+<resources>
+    <string name="release_to_load_more">RELEASE TO LOAD MORE</string>
+    <string name="swipe_to_load_more">SWIPE TO LOAD MORE</string>
+    <string name="loading_more">LOADING MORE</string>
+    <string name="refreshing">REFRESHING</string>
+    <string name="release_to_refresh">RELEASE TO REFRESH</string>
+    <string name="swipe_to_refresh">SWIPE TO REFRESH</string>
+    <string name="complete">COMPLETE</string>
+</resources>
