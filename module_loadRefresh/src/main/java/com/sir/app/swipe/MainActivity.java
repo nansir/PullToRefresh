@@ -2,24 +2,28 @@ package com.sir.app.swipe;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
-
 
 import com.sir.app.base.BaseActivity;
 import com.sir.library.refresh.OnLoadMoreListener;
 import com.sir.library.refresh.OnRefreshListener;
 import com.sir.library.refresh.SwipeToLoadLayout;
+import com.sir.library.refresh.view.LoadStateLayout;
+
+import butterknife.BindView;
 
 public class MainActivity extends BaseActivity implements OnRefreshListener, OnLoadMoreListener {
 
 
-    SwipeToLoadLayout swipeToLoadLayout;
-
-    RecyclerView recycleView;
-
     MyAdapter adapter;
+    @BindView(R.id.swipe_recycler_view)
+    RecyclerView swipeRecyclerView;
+    @BindView(R.id.swipe_load_layout)
+    SwipeToLoadLayout swipeLoadLayout;
+    @BindView(R.id.loading_state_layout)
+    LoadStateLayout loadingStateLayout;
 
     @Override
     public int bindLayout() {
@@ -28,111 +32,63 @@ public class MainActivity extends BaseActivity implements OnRefreshListener, OnL
 
     @Override
     public void initView(Bundle savedInstanceState) {
-        recycleView = (RecyclerView) findViewById(R.id.swipe_target);
-        swipeToLoadLayout = (SwipeToLoadLayout) findViewById(R.id.swipeToLoadLayout);
+
     }
 
     @Override
     public void doBusiness(Context mContext) {
-        swipeToLoadLayout.setOnRefreshListener(this);
-        swipeToLoadLayout.setOnLoadMoreListener(this);
-
+        swipeLoadLayout.setOnRefreshListener(this);
+        swipeLoadLayout.setOnLoadMoreListener(this);
+        swipeLoadLayout.setRefreshing(true);
 
         adapter = new MyAdapter(this);
-        adapter.addItem("2333333333");
-        adapter.addItem("233333333333334");
-        adapter.addItem("4444444444444");
-        adapter.addItem("44444444444444");
-        adapter.addItem("2333333333");
-        adapter.addItem("233333333333334");
-        adapter.addItem("4444444444444");
-        adapter.addItem("44444444444444");
-        adapter.addItem("55555555555");
-        adapter.addItem("2333333333");
-        adapter.addItem("233333333333334");
-        adapter.addItem("4444444444444");
-        adapter.addItem("44444444444444");
-        adapter.addItem("55555555555"); adapter.addItem("2333333333");
-        adapter.addItem("233333333333334");
-        adapter.addItem("4444444444444");
-        adapter.addItem("44444444444444");
-        adapter.addItem("55555555555");
-        adapter.addItem("2333333333");
-        adapter.addItem("233333333333334");
-        adapter.addItem("4444444444444");
-        adapter.addItem("44444444444444");
-        adapter.addItem("55555555555"); adapter.addItem("2333333333");
-        adapter.addItem("233333333333334");
-        adapter.addItem("4444444444444");
-        adapter.addItem("44444444444444");
-        adapter.addItem("55555555555");
-        adapter.addItem("2333333333");
-        adapter.addItem("233333333333334");
-        adapter.addItem("4444444444444");
-        adapter.addItem("44444444444444");
-        adapter.addItem("55555555555"); adapter.addItem("2333333333");
-        adapter.addItem("233333333333334");
-        adapter.addItem("4444444444444");
-        adapter.addItem("44444444444444");
-        adapter.addItem("55555555555");
-        adapter.addItem("2333333333");
-        adapter.addItem("233333333333334");
-        adapter.addItem("4444444444444");
-        adapter.addItem("44444444444444");
-        adapter.addItem("55555555555"); adapter.addItem("2333333333");
-        adapter.addItem("233333333333334");
-        adapter.addItem("4444444444444");
-        adapter.addItem("44444444444444");
-        adapter.addItem("55555555555");
-        adapter.addItem("2333333333");
-        adapter.addItem("233333333333334");
-        adapter.addItem("4444444444444");
-        adapter.addItem("44444444444444");
-        adapter.addItem("55555555555"); adapter.addItem("2333333333");
-        adapter.addItem("233333333333334");
-        adapter.addItem("4444444444444");
-        adapter.addItem("44444444444444");
-        adapter.addItem("55555555555");
+        swipeRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+
 
         adapter.addItem("2333333333");
         adapter.addItem("233333333333334");
         adapter.addItem("4444444444444");
         adapter.addItem("44444444444444");
-        adapter.addItem("55555555555"); adapter.addItem("2333333333");
+        adapter.addItem("55555555555");
+        adapter.addItem("2333333333");
         adapter.addItem("233333333333334");
         adapter.addItem("4444444444444");
         adapter.addItem("44444444444444");
         adapter.addItem("55555555555");
-
         adapter.addItem("55555555555");
         adapter.addItem("666666666666666");
-        recycleView.setLayoutManager(new LinearLayoutManager(this));
-        recycleView.setAdapter(adapter);
+
+
+        loadingStateLayout.showProgressView();
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                swipeRecyclerView.setAdapter(adapter);
+                loadingStateLayout.showContentView();
+            }
+        }, 2000);
     }
 
 
     @Override
     public void onRefresh() {
-        Log.e("tag", "onRefresh");
-        swipeToLoadLayout.postDelayed(new Runnable() {
+        swipeLoadLayout.postDelayed(new Runnable() {
             @Override
             public void run() {
                 adapter.addItem(0, "1222222");
-                swipeToLoadLayout.setRefreshing(false);
+                swipeLoadLayout.setRefreshing(false);
             }
         }, 2000);
     }
 
     @Override
     public void onLoadMore() {
-        Log.e("tag", "onLoadMore");
-        swipeToLoadLayout.postDelayed(new Runnable() {
+        swipeLoadLayout.postDelayed(new Runnable() {
             @Override
             public void run() {
                 adapter.addItem("22222222222");
-                swipeToLoadLayout.setLoadingMore(false);
+                swipeLoadLayout.setLoadingMore(false);
             }
         }, 2000);
     }
-
 }

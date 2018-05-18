@@ -1,21 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.sir.library.refresh.SwipeToLoadLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/swipeToLoadLayout"
+<com.sir.library.refresh.view.LoadStateLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/loading_state_layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
 
-    <include
-        android:id="@id/swipe_refresh_header"
-        layout="@layout/view_header" />
-
-    <android.support.v7.widget.RecyclerView
-        android:id="@id/swipe_target"
+    <com.sir.library.refresh.SwipeToLoadLayout
+        android:id="@+id/swipe_load_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:clipToPadding="false" />
+        android:clipToPadding="true">
 
-    <include
-        android:id="@id/swipe_load_more_footer"
-        layout="@layout/view_footer" />
+        <include
+            android:id="@id/swipe_refresh_header"
+            layout="@layout/view_refresh_header" />
 
-</com.sir.library.refresh.SwipeToLoadLayout>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/swipe_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <include
+            android:id="@id/swipe_refresh_footer"
+            layout="@layout/view_refresh_footer" />
+
+    </com.sir.library.refresh.SwipeToLoadLayout>
+
+</com.sir.library.refresh.view.LoadStateLayout>
+

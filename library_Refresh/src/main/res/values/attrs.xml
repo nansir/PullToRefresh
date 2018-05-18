@@ -29,4 +29,11 @@
         <attr name="default_to_loading_more_scrolling_duration" format="integer" />
 
     </declare-styleable>
+
+    <declare-styleable name="LoadStateLayout">
+        <attr name="errorDrawable" format="reference" />
+        <attr name="emptyDrawable" format="reference" />
+        <attr name="progressView" format="reference" />
+    </declare-styleable>
+
 </resources>

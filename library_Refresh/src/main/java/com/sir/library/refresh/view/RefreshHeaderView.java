@@ -8,9 +8,14 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.sir.app.refresh.R;
+import com.sir.library.refresh.R;
 import com.sir.library.refresh.SwipeRefreshHeaderLayout;
 
+/**
+ * 加载更多的页脚视图
+ * Created by zhuyinan on 2017/4/28.
+ * Contact by 445181052@qq.com
+ */
 public class RefreshHeaderView extends SwipeRefreshHeaderLayout {
 
     private ImageView ivArrow;

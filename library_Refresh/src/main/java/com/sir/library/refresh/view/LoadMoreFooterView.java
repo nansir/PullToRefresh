@@ -6,10 +6,14 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.sir.app.refresh.R;
+import com.sir.library.refresh.R;
 import com.sir.library.refresh.SwipeLoadMoreFooterLayout;
 
-
+/**
+ * 加载更多的页脚视图
+ * Created by zhuyinan on 2017/4/28.
+ * Contact by 445181052@qq.com
+ */
 public class LoadMoreFooterView extends SwipeLoadMoreFooterLayout {
 
     private TextView tvLoadMore;
@@ -41,6 +45,12 @@ public class LoadMoreFooterView extends SwipeLoadMoreFooterLayout {
     }
 
     @Override
+    public void onLoadMore() {
+        tvLoadMore.setText(mContext.getString(R.string.loading_more));
+        progressBar.setVisibility(VISIBLE);
+    }
+
+    @Override
     public void onPrepare() {
         ivSuccess.setVisibility(GONE);
     }
@@ -56,12 +66,6 @@ public class LoadMoreFooterView extends SwipeLoadMoreFooterLayout {
                 tvLoadMore.setText(mContext.getString(R.string.swipe_to_load_more));
             }
         }
-    }
-
-    @Override
-    public void onLoadMore() {
-        tvLoadMore.setText(mContext.getString(R.string.loading_more));
-        progressBar.setVisibility(VISIBLE);
     }
 
     @Override

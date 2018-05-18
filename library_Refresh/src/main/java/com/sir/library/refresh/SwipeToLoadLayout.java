@@ -13,7 +13,6 @@ import android.view.ViewGroup;
 import android.widget.AbsListView;
 import android.widget.Scroller;
 
-import com.sir.app.refresh.R;
 
 public class SwipeToLoadLayout extends ViewGroup {
 
@@ -332,8 +331,8 @@ public class SwipeToLoadLayout extends ViewGroup {
             return;
         } else if (0 < childNum && childNum < 4) {
             mHeaderView = findViewById(R.id.swipe_refresh_header);
-            mTargetView = findViewById(R.id.swipe_target);
-            mFooterView = findViewById(R.id.swipe_load_more_footer);
+            mTargetView = findViewById(R.id.swipe_recycler_view);
+            mFooterView = findViewById(R.id.swipe_refresh_footer);
         } else {
             // more than three children: unsupported!
             throw new IllegalStateException("Children num must equal or less than 3");
