@@ -1,4 +1,4 @@
-package com.sir.app.refresh;
+package com.sir.library.refresh;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -12,6 +12,8 @@ import android.view.ViewConfiguration;
 import android.view.ViewGroup;
 import android.widget.AbsListView;
 import android.widget.Scroller;
+
+import com.sir.app.refresh.R;
 
 public class SwipeToLoadLayout extends ViewGroup {
 

@@ -8,9 +8,9 @@ import android.util.Log;
 
 
 import com.sir.app.base.BaseActivity;
-import com.sir.app.refresh.OnLoadMoreListener;
-import com.sir.app.refresh.OnRefreshListener;
-import com.sir.app.refresh.SwipeToLoadLayout;
+import com.sir.library.refresh.OnLoadMoreListener;
+import com.sir.library.refresh.OnRefreshListener;
+import com.sir.library.refresh.SwipeToLoadLayout;
 
 public class MainActivity extends BaseActivity implements OnRefreshListener, OnLoadMoreListener {
 
@@ -43,6 +43,67 @@ public class MainActivity extends BaseActivity implements OnRefreshListener, OnL
         adapter.addItem("233333333333334");
         adapter.addItem("4444444444444");
         adapter.addItem("44444444444444");
+        adapter.addItem("2333333333");
+        adapter.addItem("233333333333334");
+        adapter.addItem("4444444444444");
+        adapter.addItem("44444444444444");
+        adapter.addItem("55555555555");
+        adapter.addItem("2333333333");
+        adapter.addItem("233333333333334");
+        adapter.addItem("4444444444444");
+        adapter.addItem("44444444444444");
+        adapter.addItem("55555555555"); adapter.addItem("2333333333");
+        adapter.addItem("233333333333334");
+        adapter.addItem("4444444444444");
+        adapter.addItem("44444444444444");
+        adapter.addItem("55555555555");
+        adapter.addItem("2333333333");
+        adapter.addItem("233333333333334");
+        adapter.addItem("4444444444444");
+        adapter.addItem("44444444444444");
+        adapter.addItem("55555555555"); adapter.addItem("2333333333");
+        adapter.addItem("233333333333334");
+        adapter.addItem("4444444444444");
+        adapter.addItem("44444444444444");
+        adapter.addItem("55555555555");
+        adapter.addItem("2333333333");
+        adapter.addItem("233333333333334");
+        adapter.addItem("4444444444444");
+        adapter.addItem("44444444444444");
+        adapter.addItem("55555555555"); adapter.addItem("2333333333");
+        adapter.addItem("233333333333334");
+        adapter.addItem("4444444444444");
+        adapter.addItem("44444444444444");
+        adapter.addItem("55555555555");
+        adapter.addItem("2333333333");
+        adapter.addItem("233333333333334");
+        adapter.addItem("4444444444444");
+        adapter.addItem("44444444444444");
+        adapter.addItem("55555555555"); adapter.addItem("2333333333");
+        adapter.addItem("233333333333334");
+        adapter.addItem("4444444444444");
+        adapter.addItem("44444444444444");
+        adapter.addItem("55555555555");
+        adapter.addItem("2333333333");
+        adapter.addItem("233333333333334");
+        adapter.addItem("4444444444444");
+        adapter.addItem("44444444444444");
+        adapter.addItem("55555555555"); adapter.addItem("2333333333");
+        adapter.addItem("233333333333334");
+        adapter.addItem("4444444444444");
+        adapter.addItem("44444444444444");
+        adapter.addItem("55555555555");
+
+        adapter.addItem("2333333333");
+        adapter.addItem("233333333333334");
+        adapter.addItem("4444444444444");
+        adapter.addItem("44444444444444");
+        adapter.addItem("55555555555"); adapter.addItem("2333333333");
+        adapter.addItem("233333333333334");
+        adapter.addItem("4444444444444");
+        adapter.addItem("44444444444444");
+        adapter.addItem("55555555555");
+
         adapter.addItem("55555555555");
         adapter.addItem("666666666666666");
         recycleView.setLayoutManager(new LinearLayoutManager(this));

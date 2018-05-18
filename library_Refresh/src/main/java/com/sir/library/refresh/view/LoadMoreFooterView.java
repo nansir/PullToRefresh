@@ -1,4 +1,4 @@
-package com.sir.app.refresh.view;
+package com.sir.library.refresh.view;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -7,7 +7,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.sir.app.refresh.R;
-import com.sir.app.refresh.SwipeLoadMoreFooterLayout;
+import com.sir.library.refresh.SwipeLoadMoreFooterLayout;
 
 
 public class LoadMoreFooterView extends SwipeLoadMoreFooterLayout {

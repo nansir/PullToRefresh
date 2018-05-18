@@ -5,9 +5,9 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 import com.sir.app.base.BaseActivity;
-import com.sir.app.refresh.OnLoadMoreListener;
-import com.sir.app.refresh.OnRefreshListener;
-import com.sir.app.refresh.SwipeToLoadLayout;
+import com.sir.library.refresh.OnLoadMoreListener;
+import com.sir.library.refresh.OnRefreshListener;
+import com.sir.library.refresh.SwipeToLoadLayout;
 
 /**
  * Created by zhuyinan on 2017/12/1.

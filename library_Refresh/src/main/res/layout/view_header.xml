@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.sir.app.refresh.view.RefreshHeaderView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.sir.library.refresh.view.RefreshHeaderView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
@@ -41,4 +41,4 @@
             android:gravity="center" />
 
     </RelativeLayout>
-</com.sir.app.refresh.view.RefreshHeaderView>
+</com.sir.library.refresh.view.RefreshHeaderView>

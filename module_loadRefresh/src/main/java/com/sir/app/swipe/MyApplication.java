@@ -13,6 +13,4 @@ public class MyApplication extends BaseApplication {
         super.onCreate();
 
     }
-
-
 }

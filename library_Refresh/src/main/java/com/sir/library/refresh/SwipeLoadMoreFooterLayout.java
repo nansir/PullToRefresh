@@ -1,25 +1,25 @@
-package com.sir.app.refresh;
+package com.sir.library.refresh;
 
 import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.FrameLayout;
 
-public class SwipeRefreshHeaderLayout extends FrameLayout implements SwipeRefreshTrigger, SwipeTrigger {
+public class SwipeLoadMoreFooterLayout extends FrameLayout implements SwipeLoadMoreTrigger, SwipeTrigger {
 
-    public SwipeRefreshHeaderLayout(Context context) {
+    public SwipeLoadMoreFooterLayout(Context context) {
         this(context, null);
     }
 
-    public SwipeRefreshHeaderLayout(Context context, AttributeSet attrs) {
+    public SwipeLoadMoreFooterLayout(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public SwipeRefreshHeaderLayout(Context context, AttributeSet attrs, int defStyleAttr) {
+    public SwipeLoadMoreFooterLayout(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
 
     @Override
-    public void onRefresh() {
+    public void onLoadMore() {
     }
 
     @Override

@@ -1,4 +1,4 @@
-package com.sir.app.refresh;
+package com.sir.library.refresh;
 
 public interface SwipeTrigger {
     void onPrepare();
