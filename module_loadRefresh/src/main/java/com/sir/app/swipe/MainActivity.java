@@ -39,11 +39,9 @@ public class MainActivity extends BaseActivity implements OnRefreshListener, OnL
     public void doBusiness(Context mContext) {
         swipeLoadLayout.setOnRefreshListener(this);
         swipeLoadLayout.setOnLoadMoreListener(this);
-        swipeLoadLayout.setRefreshing(true);
 
         adapter = new MyAdapter(this);
         swipeRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-
 
         adapter.addItem("2333333333");
         adapter.addItem("233333333333334");

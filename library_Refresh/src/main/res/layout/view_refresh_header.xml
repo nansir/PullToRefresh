@@ -14,7 +14,7 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_toLeftOf="@+id/tv_refresh"
-            android:background="@mipmap/ic_refesh_pull" />
+            android:background="@mipmap/ic_refresh_pull" />
 
         <ImageView
             android:id="@+id/iv_success"
