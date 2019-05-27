@@ -6,7 +6,7 @@ import android.os.Handler;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
-import com.sir.app.base.BaseActivity;
+import com.sir.library.base.BaseActivity;
 import com.sir.library.refresh.OnLoadMoreListener;
 import com.sir.library.refresh.OnRefreshListener;
 import com.sir.library.refresh.SwipeToLoadLayout;
@@ -14,13 +14,14 @@ import com.sir.library.refresh.view.LoadStateLayout;
 
 import butterknife.BindView;
 
+
 public class MainActivity extends BaseActivity implements OnRefreshListener, OnLoadMoreListener {
 
 
     MyAdapter adapter;
     @BindView(R.id.swipe_recycler_view)
     RecyclerView swipeRecyclerView;
-    @BindView(R.id.swipe_load_layout)
+    @BindView(R.id.swipe_load_layout)//必须这个文件ID
     SwipeToLoadLayout swipeLoadLayout;
     @BindView(R.id.loading_state_layout)
     LoadStateLayout loadingStateLayout;

@@ -11,6 +11,7 @@ android {
         targetSdkVersion TARGET_SDK_VERSION
         versionCode 1
         versionName "1.0"
+
     }
 
     buildTypes {
@@ -22,11 +23,16 @@ android {
 
 }
 
+
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.sir.app:baseapp:1.3.3'
-    compile project(':library_Refresh')
-    compile libSupportAppcompat_v7
-    compile libSupportRecyclerView
-    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.0'
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.sir.library:baseapp:1.4.1'
+    implementation project(':library_Refresh')
+    implementation libSupportAppcompat_v7
+    implementation libSupportRecyclerView
+    implementation('com.jakewharton:butterknife:8.8.1') {
+        exclude group: 'com.android.support'
+    }
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    implementation 'android.arch.paging:runtime:1.0.0'
 }

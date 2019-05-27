@@ -1,6 +1,7 @@
 package com.sir.app.swipe;
 
-import com.sir.app.base.BaseApplication;
+
+import com.sir.library.base.BaseApplication;
 
 /**
  * Created by zhuyinan on 2017/12/1.

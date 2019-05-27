@@ -1,23 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.sir.app.swipe">
 
     <application
-        android:allowBackup="true"
         android:name=".MyApplication"
+        android:allowBackup="true"
         android:icon="@mipmap/ic_logo"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        tools:replace="android:theme">
 
         <meta-data
             android:name="design_width"
-            android:value="720"/>
+            android:value="720" />
 
         <meta-data
             android:name="design_height"
-            android:value="1080"/>
+            android:value="1080" />
 
         <activity android:name=".MainActivity">
             <intent-filter>

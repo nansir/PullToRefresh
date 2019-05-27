@@ -2,8 +2,8 @@ package com.sir.app.swipe;
 
 import android.app.Activity;
 
-import com.sir.app.base.BaseRecyclerAdapter;
-import com.sir.app.base.help.ViewHolder;
+import com.sir.library.base.BaseRecyclerAdapter;
+import com.sir.library.base.help.ViewHolder;
 
 /**
  * Created by zhuyinan on 2017/7/7.
